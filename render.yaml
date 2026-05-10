@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: bloomberg-cloud-server
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn cloud_app:app
+    plan: free
